@@ -1,0 +1,1308 @@
+{
+  "classes": [
+    "airplane",
+    "bird",
+    "car",
+    "cat",
+    "deer",
+    "dog",
+    "horse",
+    "monkey",
+    "ship",
+    "truck"
+  ],
+  "models": {
+    "resnet18": {
+      "model": "resnet18",
+      "settings": {
+        "seed": 42,
+        "batch_size": 64,
+        "epochs_per_stage": 3,
+        "train_per_class": 400,
+        "val_per_class": 100,
+        "pool_size": 100000,
+        "threshold": 0.9,
+        "cap_per_class": 300,
+        "fixed_bn": true
+      },
+      "shared": [
+        {
+          "epoch": 1,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 5130,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.918940544128418,
+          "train_accuracy": 0.6927083134651184,
+          "val_loss": 0.4818274536132813,
+          "val_accuracy": 0.839
+        },
+        {
+          "epoch": 2,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 5130,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.38640081882476807,
+          "train_accuracy": 0.8710317611694336,
+          "val_loss": 0.4242312622070312,
+          "val_accuracy": 0.865
+        },
+        {
+          "epoch": 3,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 5130,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.3242414593696594,
+          "train_accuracy": 0.8888888955116272,
+          "val_loss": 0.40779241943359373,
+          "val_accuracy": 0.863
+        },
+        {
+          "epoch": 4,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 8398858,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.5085963606834412,
+          "train_accuracy": 0.8340773582458496,
+          "val_loss": 0.48165667724609373,
+          "val_accuracy": 0.831
+        },
+        {
+          "epoch": 5,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 8398858,
+          "lr": {
+            "early": 1.5e-05,
+            "middle": 4e-05,
+            "late": 0.0001,
+            "head": 0.0005
+          },
+          "train_loss": 0.21184904873371124,
+          "train_accuracy": 0.9223710298538208,
+          "val_loss": 0.35201675415039063,
+          "val_accuracy": 0.875
+        },
+        {
+          "epoch": 6,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 8398858,
+          "lr": {
+            "early": 1.5e-05,
+            "middle": 4e-05,
+            "late": 0.0001,
+            "head": 0.0005
+          },
+          "train_loss": 0.1317855566740036,
+          "train_accuracy": 0.9546130895614624,
+          "val_loss": 0.341885986328125,
+          "val_accuracy": 0.886
+        }
+      ],
+      "variants": {
+        "supervised": {
+          "best_epoch": 11,
+          "history": [
+            {
+              "epoch": 7,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.11962970346212387,
+              "train_accuracy": 0.9595733880996704,
+              "val_loss": 0.3265388488769531,
+              "val_accuracy": 0.903
+            },
+            {
+              "epoch": 8,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.08189523965120316,
+              "train_accuracy": 0.9685019850730896,
+              "val_loss": 0.32567449951171873,
+              "val_accuracy": 0.902
+            },
+            {
+              "epoch": 9,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 7.5e-06,
+                "middle": 2e-05,
+                "late": 5e-05,
+                "head": 0.00025
+              },
+              "train_loss": 0.04818759858608246,
+              "train_accuracy": 0.9846230149269104,
+              "val_loss": 0.319916748046875,
+              "val_accuracy": 0.905
+            },
+            {
+              "epoch": 10,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 7.5e-06,
+                "middle": 2e-05,
+                "late": 5e-05,
+                "head": 0.00025
+              },
+              "train_loss": 0.04984728991985321,
+              "train_accuracy": 0.9841269850730896,
+              "val_loss": 0.3390894775390625,
+              "val_accuracy": 0.905
+            },
+            {
+              "epoch": 11,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 3.75e-06,
+                "middle": 1e-05,
+                "late": 2.5e-05,
+                "head": 0.000125
+              },
+              "train_loss": 0.031795602291822433,
+              "train_accuracy": 0.9913194179534912,
+              "val_loss": 0.368126220703125,
+              "val_accuracy": 0.912
+            },
+            {
+              "epoch": 12,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 1.875e-06,
+                "middle": 5e-06,
+                "late": 1.25e-05,
+                "head": 6.25e-05
+              },
+              "train_loss": 0.030061667785048485,
+              "train_accuracy": 0.9903273582458496,
+              "val_loss": 0.3264702453613281,
+              "val_accuracy": 0.91
+            }
+          ],
+          "test": {
+            "n": 8000,
+            "loss": 0.35344744873046874,
+            "accuracy": 0.899875,
+            "macro_f1": 0.9000334739685059,
+            "confusion": [
+              [
+                743,
+                4,
+                7,
+                1,
+                1,
+                0,
+                3,
+                0,
+                33,
+                8
+              ],
+              [
+                7,
+                760,
+                0,
+                11,
+                5,
+                6,
+                3,
+                8,
+                0,
+                0
+              ],
+              [
+                5,
+                0,
+                765,
+                0,
+                1,
+                0,
+                0,
+                0,
+                4,
+                25
+              ],
+              [
+                0,
+                17,
+                0,
+                666,
+                25,
+                82,
+                2,
+                7,
+                0,
+                1
+              ],
+              [
+                2,
+                14,
+                2,
+                12,
+                724,
+                29,
+                11,
+                6,
+                0,
+                0
+              ],
+              [
+                1,
+                15,
+                0,
+                28,
+                15,
+                697,
+                36,
+                6,
+                0,
+                2
+              ],
+              [
+                2,
+                4,
+                0,
+                2,
+                28,
+                46,
+                712,
+                3,
+                0,
+                3
+              ],
+              [
+                0,
+                52,
+                1,
+                21,
+                14,
+                50,
+                9,
+                653,
+                0,
+                0
+              ],
+              [
+                8,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                774,
+                17
+              ],
+              [
+                13,
+                0,
+                38,
+                0,
+                1,
+                0,
+                1,
+                1,
+                41,
+                705
+              ]
+            ]
+          }
+        },
+        "pseudo": {
+          "best_epoch": 12,
+          "history": [
+            {
+              "epoch": 7,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.09504704177379608,
+              "train_accuracy": 0.9682539701461792,
+              "val_loss": 0.31842364501953124,
+              "val_accuracy": 0.897
+            },
+            {
+              "epoch": 8,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.07368278503417969,
+              "train_accuracy": 0.973710298538208,
+              "val_loss": 0.34640396118164063,
+              "val_accuracy": 0.886
+            },
+            {
+              "epoch": 9,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 10498570,
+              "lr": {
+                "early": 7.5e-06,
+                "middle": 2e-05,
+                "late": 5e-05,
+                "head": 0.00025
+              },
+              "train_loss": 0.050966423004865646,
+              "train_accuracy": 0.985615074634552,
+              "val_loss": 0.35866302490234375,
+              "val_accuracy": 0.893
+            },
+            {
+              "epoch": 10,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 3.75e-06,
+                "middle": 1e-05,
+                "late": 2.5e-05,
+                "head": 0.000125
+              },
+              "train_loss": 0.04034247249364853,
+              "train_accuracy": 0.9853670597076416,
+              "val_loss": 0.3167438049316406,
+              "val_accuracy": 0.917
+            },
+            {
+              "epoch": 11,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 1.875e-06,
+                "middle": 5e-06,
+                "late": 1.25e-05,
+                "head": 6.25e-05
+              },
+              "train_loss": 0.03102128393948078,
+              "train_accuracy": 0.9915674328804016,
+              "val_loss": 0.3333194885253906,
+              "val_accuracy": 0.909
+            },
+            {
+              "epoch": 12,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 11181642,
+              "lr": {
+                "early": 9.375e-07,
+                "middle": 2.5e-06,
+                "late": 6.25e-06,
+                "head": 3.125e-05
+              },
+              "train_loss": 0.020766606554389,
+              "train_accuracy": 0.9945436716079712,
+              "val_loss": 0.3111951599121094,
+              "val_accuracy": 0.921
+            }
+          ],
+          "test": {
+            "n": 8000,
+            "loss": 0.3137234191894531,
+            "accuracy": 0.906875,
+            "macro_f1": 0.9068160057067871,
+            "confusion": [
+              [
+                748,
+                3,
+                6,
+                1,
+                1,
+                0,
+                1,
+                0,
+                29,
+                11
+              ],
+              [
+                8,
+                757,
+                0,
+                15,
+                5,
+                4,
+                1,
+                10,
+                0,
+                0
+              ],
+              [
+                6,
+                0,
+                748,
+                0,
+                1,
+                0,
+                0,
+                0,
+                4,
+                41
+              ],
+              [
+                0,
+                10,
+                0,
+                692,
+                31,
+                53,
+                2,
+                10,
+                2,
+                0
+              ],
+              [
+                2,
+                12,
+                2,
+                20,
+                725,
+                21,
+                13,
+                5,
+                0,
+                0
+              ],
+              [
+                1,
+                14,
+                0,
+                47,
+                16,
+                664,
+                45,
+                11,
+                0,
+                2
+              ],
+              [
+                2,
+                5,
+                3,
+                3,
+                25,
+                33,
+                718,
+                7,
+                1,
+                3
+              ],
+              [
+                1,
+                20,
+                0,
+                24,
+                14,
+                15,
+                7,
+                719,
+                0,
+                0
+              ],
+              [
+                15,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                763,
+                21
+              ],
+              [
+                14,
+                0,
+                30,
+                0,
+                0,
+                0,
+                1,
+                1,
+                33,
+                721
+              ]
+            ]
+          }
+        }
+      },
+      "pseudo_labels": {
+        "pool_size": 100000,
+        "above_threshold_and_agree": 50047,
+        "used": 3000,
+        "per_class": [
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300
+        ],
+        "min_confidence": 0.9999237060546875,
+        "mean_confidence": 0.9999889135360718,
+        "validation_accepted": 735,
+        "validation_total": 1000,
+        "validation_precision": 0.9755102040816327
+      },
+      "parameters": 11181642,
+      "environment": {
+        "python": "3.14.7",
+        "torch": "2.9.1",
+        "torchvision": "0.24.1",
+        "device": "mps"
+      },
+      "paired": {
+        "gain_images": 183,
+        "loss_images": 127,
+        "accuracy_difference": 0.007,
+        "paired_bootstrap_95": [
+          0.00275,
+          0.01125
+        ]
+      }
+    },
+    "mobilenet_v3_small": {
+      "model": "mobilenet_v3_small",
+      "settings": {
+        "seed": 42,
+        "batch_size": 64,
+        "epochs_per_stage": 3,
+        "train_per_class": 400,
+        "val_per_class": 100,
+        "pool_size": 100000,
+        "threshold": 0.9,
+        "cap_per_class": 300,
+        "fixed_bn": true
+      },
+      "shared": [
+        {
+          "epoch": 1,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 601098,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.8921144008636475,
+          "train_accuracy": 0.6822916865348816,
+          "val_loss": 0.594080322265625,
+          "val_accuracy": 0.802
+        },
+        {
+          "epoch": 2,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 601098,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.4756879508495331,
+          "train_accuracy": 0.8373016119003296,
+          "val_loss": 0.5760732421875,
+          "val_accuracy": 0.795
+        },
+        {
+          "epoch": 3,
+          "stage": 0,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 601098,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.37600210309028625,
+          "train_accuracy": 0.8707837462425232,
+          "val_loss": 0.546303466796875,
+          "val_accuracy": 0.798
+        },
+        {
+          "epoch": 4,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 1337586,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.38125547766685486,
+          "train_accuracy": 0.8650793433189392,
+          "val_loss": 0.5373377075195312,
+          "val_accuracy": 0.809
+        },
+        {
+          "epoch": 5,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 1337586,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.25748270750045776,
+          "train_accuracy": 0.9052579402923584,
+          "val_loss": 0.5140750732421875,
+          "val_accuracy": 0.819
+        },
+        {
+          "epoch": 6,
+          "stage": 1,
+          "steps": 63,
+          "labeled_draws": 4032,
+          "pseudo_draws": 0,
+          "trainable_params": 1337586,
+          "lr": {
+            "early": 3e-05,
+            "middle": 8e-05,
+            "late": 0.0002,
+            "head": 0.001
+          },
+          "train_loss": 0.1837746948003769,
+          "train_accuracy": 0.9357638955116272,
+          "val_loss": 0.6152073974609376,
+          "val_accuracy": 0.801
+        }
+      ],
+      "variants": {
+        "supervised": {
+          "best_epoch": 9,
+          "history": [
+            {
+              "epoch": 7,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.12798650562763214,
+              "train_accuracy": 0.9546130895614624,
+              "val_loss": 0.5173727416992188,
+              "val_accuracy": 0.826
+            },
+            {
+              "epoch": 8,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 7.5e-06,
+                "middle": 2e-05,
+                "late": 5e-05,
+                "head": 0.00025
+              },
+              "train_loss": 0.08863789588212967,
+              "train_accuracy": 0.9680059552192688,
+              "val_loss": 0.5338359375,
+              "val_accuracy": 0.827
+            },
+            {
+              "epoch": 9,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 3.75e-06,
+                "middle": 1e-05,
+                "late": 2.5e-05,
+                "head": 0.000125
+              },
+              "train_loss": 0.08467520028352737,
+              "train_accuracy": 0.9744543433189392,
+              "val_loss": 0.5211015014648438,
+              "val_accuracy": 0.841
+            },
+            {
+              "epoch": 10,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 1.875e-06,
+                "middle": 5e-06,
+                "late": 1.25e-05,
+                "head": 6.25e-05
+              },
+              "train_loss": 0.08510639518499374,
+              "train_accuracy": 0.9714781641960144,
+              "val_loss": 0.5160159301757813,
+              "val_accuracy": 0.839
+            },
+            {
+              "epoch": 11,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 9.375e-07,
+                "middle": 2.5e-06,
+                "late": 6.25e-06,
+                "head": 3.125e-05
+              },
+              "train_loss": 0.08822637796401978,
+              "train_accuracy": 0.9692460298538208,
+              "val_loss": 0.5113866882324218,
+              "val_accuracy": 0.838
+            },
+            {
+              "epoch": 12,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 4032,
+              "pseudo_draws": 0,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 4.6875e-07,
+                "middle": 1.25e-06,
+                "late": 3.125e-06,
+                "head": 1.5625e-05
+              },
+              "train_loss": 0.07942488044500351,
+              "train_accuracy": 0.9744543433189392,
+              "val_loss": 0.5095901489257812,
+              "val_accuracy": 0.836
+            }
+          ],
+          "test": {
+            "n": 8000,
+            "loss": 0.5255025634765625,
+            "accuracy": 0.8385,
+            "macro_f1": 0.8379554748535156,
+            "confusion": [
+              [
+                691,
+                19,
+                8,
+                0,
+                2,
+                2,
+                4,
+                1,
+                51,
+                22
+              ],
+              [
+                13,
+                717,
+                0,
+                18,
+                9,
+                14,
+                3,
+                23,
+                3,
+                0
+              ],
+              [
+                14,
+                2,
+                724,
+                2,
+                2,
+                2,
+                2,
+                0,
+                14,
+                38
+              ],
+              [
+                0,
+                30,
+                4,
+                591,
+                35,
+                100,
+                11,
+                26,
+                1,
+                2
+              ],
+              [
+                4,
+                25,
+                1,
+                45,
+                641,
+                30,
+                41,
+                11,
+                0,
+                2
+              ],
+              [
+                2,
+                31,
+                0,
+                71,
+                19,
+                578,
+                61,
+                34,
+                3,
+                1
+              ],
+              [
+                2,
+                7,
+                8,
+                5,
+                27,
+                37,
+                698,
+                9,
+                2,
+                5
+              ],
+              [
+                1,
+                33,
+                0,
+                46,
+                22,
+                26,
+                12,
+                660,
+                0,
+                0
+              ],
+              [
+                27,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                755,
+                16
+              ],
+              [
+                21,
+                1,
+                56,
+                3,
+                0,
+                1,
+                6,
+                2,
+                57,
+                653
+              ]
+            ]
+          }
+        },
+        "pseudo": {
+          "best_epoch": 9,
+          "history": [
+            {
+              "epoch": 7,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 1.5e-05,
+                "middle": 4e-05,
+                "late": 0.0001,
+                "head": 0.0005
+              },
+              "train_loss": 0.10040417313575745,
+              "train_accuracy": 0.9655258059501648,
+              "val_loss": 0.535309326171875,
+              "val_accuracy": 0.823
+            },
+            {
+              "epoch": 8,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 7.5e-06,
+                "middle": 2e-05,
+                "late": 5e-05,
+                "head": 0.00025
+              },
+              "train_loss": 0.07145541161298752,
+              "train_accuracy": 0.9774305820465088,
+              "val_loss": 0.54724560546875,
+              "val_accuracy": 0.821
+            },
+            {
+              "epoch": 9,
+              "stage": 2,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1517618,
+              "lr": {
+                "early": 3.75e-06,
+                "middle": 1e-05,
+                "late": 2.5e-05,
+                "head": 0.000125
+              },
+              "train_loss": 0.07264382392168045,
+              "train_accuracy": 0.9756944179534912,
+              "val_loss": 0.5264479370117188,
+              "val_accuracy": 0.839
+            },
+            {
+              "epoch": 10,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 1.875e-06,
+                "middle": 5e-06,
+                "late": 1.25e-05,
+                "head": 6.25e-05
+              },
+              "train_loss": 0.0719117596745491,
+              "train_accuracy": 0.9747023582458496,
+              "val_loss": 0.5248258056640625,
+              "val_accuracy": 0.834
+            },
+            {
+              "epoch": 11,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 9.375e-07,
+                "middle": 2.5e-06,
+                "late": 6.25e-06,
+                "head": 3.125e-05
+              },
+              "train_loss": 0.07546928524971008,
+              "train_accuracy": 0.9742063283920288,
+              "val_loss": 0.5164720458984375,
+              "val_accuracy": 0.837
+            },
+            {
+              "epoch": 12,
+              "stage": 3,
+              "steps": 63,
+              "labeled_draws": 3024,
+              "pseudo_draws": 1008,
+              "trainable_params": 1528106,
+              "lr": {
+                "early": 4.6875e-07,
+                "middle": 1.25e-06,
+                "late": 3.125e-06,
+                "head": 1.5625e-05
+              },
+              "train_loss": 0.06461621820926666,
+              "train_accuracy": 0.979414701461792,
+              "val_loss": 0.514803955078125,
+              "val_accuracy": 0.836
+            }
+          ],
+          "test": {
+            "n": 8000,
+            "loss": 0.5276323852539062,
+            "accuracy": 0.838125,
+            "macro_f1": 0.8374775648117065,
+            "confusion": [
+              [
+                682,
+                16,
+                15,
+                0,
+                2,
+                2,
+                5,
+                1,
+                55,
+                22
+              ],
+              [
+                13,
+                716,
+                1,
+                17,
+                15,
+                11,
+                4,
+                19,
+                3,
+                1
+              ],
+              [
+                10,
+                2,
+                740,
+                1,
+                1,
+                2,
+                2,
+                0,
+                11,
+                31
+              ],
+              [
+                0,
+                30,
+                5,
+                594,
+                40,
+                97,
+                9,
+                22,
+                1,
+                2
+              ],
+              [
+                3,
+                21,
+                1,
+                46,
+                652,
+                28,
+                35,
+                12,
+                0,
+                2
+              ],
+              [
+                2,
+                29,
+                0,
+                80,
+                21,
+                570,
+                60,
+                35,
+                2,
+                1
+              ],
+              [
+                2,
+                9,
+                7,
+                5,
+                29,
+                34,
+                695,
+                10,
+                3,
+                6
+              ],
+              [
+                1,
+                35,
+                0,
+                48,
+                25,
+                26,
+                11,
+                653,
+                1,
+                0
+              ],
+              [
+                25,
+                0,
+                2,
+                1,
+                1,
+                0,
+                0,
+                0,
+                752,
+                19
+              ],
+              [
+                15,
+                2,
+                66,
+                2,
+                0,
+                1,
+                5,
+                2,
+                56,
+                651
+              ]
+            ]
+          }
+        }
+      },
+      "pseudo_labels": {
+        "pool_size": 100000,
+        "above_threshold_and_agree": 38765,
+        "used": 3000,
+        "per_class": [
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300,
+          300
+        ],
+        "min_confidence": 0.997536301612854,
+        "mean_confidence": 0.9998259544372559,
+        "validation_accepted": 616,
+        "validation_total": 1000,
+        "validation_precision": 0.9431818181818182
+      },
+      "parameters": 1528106,
+      "environment": {
+        "python": "3.14.7",
+        "torch": "2.9.1",
+        "torchvision": "0.24.1",
+        "device": "mps"
+      },
+      "paired": {
+        "gain_images": 87,
+        "loss_images": 90,
+        "accuracy_difference": -0.000375,
+        "paired_bootstrap_95": [
+          -0.003625,
+          0.002875
+        ]
+      }
+    }
+  }
+}
