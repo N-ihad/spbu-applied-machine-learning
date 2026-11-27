@@ -1,0 +1,149 @@
+{
+  "dataset": {
+    "tasks": 800,
+    "workers": 164,
+    "votes": 8000,
+    "gold_counts": [
+      400,
+      400
+    ],
+    "min_votes_per_task": 10,
+    "max_votes_per_task": 10,
+    "worker_load_min_median_max": [
+      20,
+      20.0,
+      800
+    ],
+    "workers_with_minimum_load": 124,
+    "top_five_workers_votes": 3220,
+    "positive_votes": 4581,
+    "vote_splits": {
+      "10:0": 78,
+      "9:1": 130,
+      "8:2": 198,
+      "7:3": 164,
+      "6:4": 165,
+      "5:5": 65
+    },
+    "pairwise_agreement": 0.6286944444444444,
+    "fleiss_kappa": 0.24138393913120565
+  },
+  "protocol": {
+    "split_seed": 42,
+    "calibration_per_class": 80,
+    "calibration_tasks": 160,
+    "test_tasks": 640,
+    "test_gold_counts": [
+      320,
+      320
+    ],
+    "workers_absent_from_calibration": 0,
+    "em_iterations": 40,
+    "bootstrap_seed": 43,
+    "bootstrap_samples": 5000
+  },
+  "individual_vote_accuracy_on_test": 0.725625,
+  "quality": {
+    "Majority Vote": {
+      "correct": 589,
+      "accuracy": 0.9203125,
+      "macro_f1": 0.9203029659309829,
+      "confusion": [
+        [
+          291,
+          29
+        ],
+        [
+          22,
+          298
+        ]
+      ]
+    },
+    "Weighted Majority Vote": {
+      "correct": 597,
+      "accuracy": 0.9328125,
+      "macro_f1": 0.9327992107814289,
+      "confusion": [
+        [
+          303,
+          17
+        ],
+        [
+          26,
+          294
+        ]
+      ]
+    },
+    "Dawid–Skene": {
+      "correct": 589,
+      "accuracy": 0.9203125,
+      "macro_f1": 0.9202562354786459,
+      "confusion": [
+        [
+          303,
+          17
+        ],
+        [
+          34,
+          286
+        ]
+      ]
+    }
+  },
+  "paired_accuracy": {
+    "Weighted Majority Vote minus Majority Vote": {
+      "gains": 17,
+      "losses": 9,
+      "difference": 0.0125,
+      "ci95": [
+        -0.003125,
+        0.028125
+      ]
+    },
+    "Dawid–Skene minus Majority Vote": {
+      "gains": 17,
+      "losses": 17,
+      "difference": 0.0,
+      "ci95": [
+        -0.0171875,
+        0.0171875
+      ]
+    },
+    "Dawid–Skene minus Weighted Majority Vote": {
+      "gains": 3,
+      "losses": 11,
+      "difference": -0.0125,
+      "ci95": [
+        -0.0234375,
+        -0.0015625
+      ]
+    }
+  },
+  "test_majority_by_support": {
+    "5": {
+      "tasks": 50,
+      "errors": 10
+    },
+    "6": {
+      "tasks": 132,
+      "errors": 23
+    },
+    "7": {
+      "tasks": 137,
+      "errors": 11
+    },
+    "8": {
+      "tasks": 161,
+      "errors": 3
+    },
+    "9": {
+      "tasks": 105,
+      "errors": 4
+    },
+    "10": {
+      "tasks": 55,
+      "errors": 0
+    }
+  },
+  "majority_expected_accuracy_with_random_ties": 0.896875
+}
